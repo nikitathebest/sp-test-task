@@ -22,7 +22,7 @@ ruby parser.rb webserver.log
 
 ## Run spec
 ```bash
-bundle exerc rspec
+bundle exec rspec
 ```
 
 ## Result 
