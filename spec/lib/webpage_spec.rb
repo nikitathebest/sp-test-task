@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../../lib/webpage'
 
 RSpec.describe Webpage do
   let(:url) { '/home' }
