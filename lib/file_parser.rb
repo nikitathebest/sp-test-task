@@ -1,4 +1,5 @@
 require_relative 'webpage'
+require_relative 'webpage_printer'
 require_relative 'errors/file_format_error'
 require_relative 'errors/file_missing_error'
 require_relative 'errors/file_extension_error'

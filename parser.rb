@@ -4,4 +4,5 @@ file_path = ARGV.first
 file_parser = FileParser.new(file_path)
 webpages = file_parser.parse
 
-webpages.each { |webpage| puts webpage.print_visits }
+WebpagePrinter.print_visits(webpages)
+WebpagePrinter.print_unique(webpages)
