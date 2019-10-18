@@ -1,7 +1,7 @@
 require 'spec_helper'
 require_relative '../../lib/webpage_printer'
 
-RSpec.describe WebpagePrinter do  
+RSpec.describe WebpagePrinter do
   let(:webpage1) { double }
   let(:webpage2) { double }
 
@@ -26,7 +26,7 @@ RSpec.describe WebpagePrinter do
     end
   end
 
-  describe '#print_unique' do 
+  describe '#print_unique' do
     it 'prints webpages by most unique views' do
       expect(STDOUT).to receive(:puts).with('Unique page views:')
       expect(STDOUT).to receive(:puts).with('/about 2 unique views')

@@ -2,31 +2,30 @@ require 'spec_helper'
 require_relative '../../lib/file_parser'
 
 RSpec.describe FileParser do
-
   let(:file_path) { 'spec/fixtures/correct_webserver.log' }
   let(:webpages) { [Webpage.new('/help_page/1')] }
-  
+
   subject { described_class.new(file_path) }
 
   describe '#parse' do
     context 'file format is correct' do
       it 'updates the page' do
         expect(subject.parse).to match_array([
-          have_attributes(
-            class: Webpage,
-            url: '/help_page/1',
-            visits: 2
-          )
-        ])
+                                               have_attributes(
+                                                 class: Webpage,
+                                                 url: '/help_page/1',
+                                                 visits: 2
+                                               )
+                                             ])
       end
 
       it 'returns an array of Webpage objects' do
         expect(subject.parse).to match_array([
-          have_attributes(
-            class: Webpage,
-            url: '/help_page/1'
-          )
-        ])
+                                               have_attributes(
+                                                 class: Webpage,
+                                                 url: '/help_page/1'
+                                               )
+                                             ])
       end
     end
 
@@ -40,13 +39,13 @@ RSpec.describe FileParser do
   end
 
   describe '#check_file_presence' do
-    context 'correct file' do 
+    context 'correct file' do
       it 'returns nil if everythings okay' do
         expect(subject.send(:check_file_presence)).to be_nil
       end
     end
 
-    context 'file does not exist' do 
+    context 'file does not exist' do
       let(:file_path) { 'spec/fixtures/correct_webserver.logg' }
 
       it 'raises file missing error' do

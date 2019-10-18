@@ -1,1 +1,1 @@
-class FileMissingError < StandardError; end;
+class FileMissingError < StandardError; end

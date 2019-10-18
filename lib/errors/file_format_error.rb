@@ -1,1 +1,1 @@
-class FileFormatError < StandardError; end;
+class FileFormatError < StandardError; end

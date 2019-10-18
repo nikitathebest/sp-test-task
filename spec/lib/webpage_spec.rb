@@ -7,10 +7,10 @@ RSpec.describe Webpage do
   let(:ips) { ['127.0.0.1', '127.0.0.1', '128.1.1.1'] }
   let(:print_visits_data) { '/home 3 visits' }
   let(:print_unique_views_data) { '/home 2 unique views' }
-  
+
   subject { described_class.new(url) }
-  
-  it 'updates webpage with ip and visit' do 
+
+  it 'updates webpage with ip and visit' do
     expect { subject.update_page(ip) }.to change { subject.visits }.by(1)
     expect(subject.ips).to eq(['127.0.0.0'])
   end

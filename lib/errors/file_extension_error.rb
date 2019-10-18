@@ -1,1 +1,1 @@
-class FileExtensionError < StandardError; end;
+class FileExtensionError < StandardError; end
