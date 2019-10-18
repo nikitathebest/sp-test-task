@@ -1,0 +1,1 @@
+class FileMissingError < StandardError; end;

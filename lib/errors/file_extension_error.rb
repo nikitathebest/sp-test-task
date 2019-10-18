@@ -1,0 +1,1 @@
+class FileExtensionError < StandardError; end;
