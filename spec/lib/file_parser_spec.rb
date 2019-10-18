@@ -33,7 +33,7 @@ RSpec.describe FileParser do
       let(:file_path) { 'spec/fixtures/invalid_webserver.log' }
 
       it 'raises file format error' do
-        expect { subject.parse }.to raise_error(FileFormatError, 'Incorrect file format')
+        expect { subject.parse }.to raise_error(StandardError, 'Incorrect file format')
       end
     end
   end
@@ -49,7 +49,7 @@ RSpec.describe FileParser do
       let(:file_path) { 'spec/fixtures/correct_webserver.logg' }
 
       it 'raises file missing error' do
-        expect { subject.check_file_presence }.to raise_error(FileMissingError, 'File is not present')
+        expect { subject.check_file_presence }.to raise_error(StandardError, 'File is not present')
       end
     end
 
@@ -57,7 +57,7 @@ RSpec.describe FileParser do
       let(:file_path) { 'spec/fixtures/invalid_webserver.lo' }
 
       it 'raises file extension error' do
-        expect { subject.check_file_presence }.to raise_error(FileExtensionError, 'Incorrect file extension')
+        expect { subject.check_file_presence }.to raise_error(StandardError, 'Incorrect file extension')
       end
     end
   end

@@ -1,1 +1,0 @@
-class FileFormatError < StandardError; end
