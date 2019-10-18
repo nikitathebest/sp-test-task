@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../../lib/webpage_printer'
 
 RSpec.describe WebpagePrinter do  
   let(:webpage1) { double }
