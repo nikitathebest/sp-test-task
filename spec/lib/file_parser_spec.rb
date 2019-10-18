@@ -38,4 +38,28 @@ RSpec.describe FileParser do
       end
     end
   end
+
+  describe '#check_file_presence' do
+    context 'correct file' do 
+      it 'returns nil if everythings okay' do
+        expect(subject.send(:check_file_presence)).to be_nil
+      end
+    end
+
+    context 'file does not exist' do 
+      let(:file_path) { 'spec/fixtures/correct_webserver.logg' }
+
+      it 'raises file missing error' do
+        expect { subject.check_file_presence }.to raise_error(FileMissingError, 'File is not present')
+      end
+    end
+
+    context 'incorrect extension of file' do
+      let(:file_path) { 'spec/fixtures/invalid_webserver.lo' }
+
+      it 'raises file extension error' do
+        expect { subject.check_file_presence }.to raise_error(FileExtensionError, 'Incorrect file extension')
+      end
+    end
+  end
 end
