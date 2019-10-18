@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../../lib/file_parser'
 
 RSpec.describe FileParser do
 
