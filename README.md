@@ -35,10 +35,10 @@ Page visits:
 /help_page/1 80 visits
 /home 78 visits
 Unique page views:
-/index 23 unique views
-/contact 23 unique views
 /help_page/1 23 unique views
-/about/2 22 unique views
+/contact 23 unique views
+/index 23 unique views
 /home 22 unique views
+/about/2 22 unique views
 /about 21 unique views
 ```
