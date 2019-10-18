@@ -11,4 +11,16 @@ class Webpage
     @visits += 1
     ips << ip
   end
+
+  def print_visits
+    "#{url} #{visits} visits"
+  end
+
+  def print_unique_views
+    "#{url} #{unique_views} unique views"
+  end
+
+  def unique_views
+    ips.uniq.count
+  end
 end
